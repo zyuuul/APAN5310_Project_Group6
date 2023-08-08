@@ -1,0 +1,94 @@
+"dbms","table_catalog","table_schema","table_name","column_name","ordinal_position","data_type","character_maximum_length","constraint_type","table_schema-2","table_name-2","column_name-2"
+"postgresql","test","public","locations","location_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","test","public","customers","customer_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","test","public","customers","customer_address",7,"integer",NULL,"FOREIGN KEY","public","locations","location_id"
+"postgresql","test","public","airlines","airline_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","test","public","flights","flight_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","test","public","flights","airline_id",2,"integer",NULL,"FOREIGN KEY","public","airlines","airline_id"
+"postgresql","test","public","flights","depart_location",4,"integer",NULL,"FOREIGN KEY","public","locations","location_id"
+"postgresql","test","public","flights","destin_location",6,"integer",NULL,"FOREIGN KEY","public","locations","location_id"
+"postgresql","test","public","hotels","hotel_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","test","public","hotels","hotel_address",3,"integer",NULL,"FOREIGN KEY","public","locations","location_id"
+"postgresql","test","public","room_types","room_type_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","test","public","room_types","room_type",2,"character varying",255,"UNIQUE",NULL,NULL,NULL
+"postgresql","test","public","rental_companies","rental_company_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","test","public","rental_companies","rental_company_address",3,"integer",NULL,"FOREIGN KEY","public","locations","location_id"
+"postgresql","test","public","car_types","car_type_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","test","public","discounts","customer_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","test","public","discounts","customer_id",1,"integer",NULL,"FOREIGN KEY","public","customers","customer_id"
+"postgresql","test","public","payment_information","payment_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","test","public","payment_information","customer_id",2,"integer",NULL,"FOREIGN KEY","public","customers","customer_id"
+"postgresql","test","public","payment_information","billing_address",5,"integer",NULL,"FOREIGN KEY","public","locations","location_id"
+"postgresql","test","public","payment_information","discount",6,"integer",NULL,"FOREIGN KEY","public","discounts","customer_id"
+"postgresql","test","public","user_preferences","customer_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","test","public","user_preferences","customer_id",1,"integer",NULL,"FOREIGN KEY","public","customers","customer_id"
+"postgresql","test","public","user_preferences","preferred_hotel_id",2,"integer",NULL,"FOREIGN KEY","public","hotels","hotel_id"
+"postgresql","test","public","user_preferences","preferred_car_model_id",3,"integer",NULL,"FOREIGN KEY","public","car_types","car_type_id"
+"postgresql","test","public","user_preferences","preferred_airline_id",4,"integer",NULL,"FOREIGN KEY","public","airlines","airline_id"
+"postgresql","test","public","hotel_search_recommendations","hotel_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","test","public","hotel_search_recommendations","hotel_id",1,"integer",NULL,"FOREIGN KEY","public","hotels","hotel_id"
+"postgresql","test","public","hotel_search_recommendations","room_type_id",2,"integer",NULL,"FOREIGN KEY","public","room_types","room_type_id"
+"postgresql","test","public","car_rental_search_recommendations","rental_company_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","test","public","car_rental_search_recommendations","rental_company_id",1,"integer",NULL,"FOREIGN KEY","public","rental_companies","rental_company_id"
+"postgresql","test","public","car_rental_search_recommendations","car_type_id",2,"integer",NULL,"FOREIGN KEY","public","car_types","car_type_id"
+"postgresql","test","public","flight_search_recommendations","flight_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","test","public","flight_search_recommendations","flight_id",1,"integer",NULL,"FOREIGN KEY","public","flights","flight_id"
+"postgresql","test","public","flight_bookings","booking_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","test","public","flight_bookings","customer_id",2,"integer",NULL,"FOREIGN KEY","public","customers","customer_id"
+"postgresql","test","public","flight_bookings","payment_id",3,"integer",NULL,"FOREIGN KEY","public","payment_information","payment_id"
+"postgresql","test","public","flight_bookings","flight_id",4,"integer",NULL,"FOREIGN KEY","public","flights","flight_id"
+"postgresql","test","public","hotel_bookings","booking_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","test","public","hotel_bookings","customer_id",2,"integer",NULL,"FOREIGN KEY","public","customers","customer_id"
+"postgresql","test","public","hotel_bookings","payment_id",3,"integer",NULL,"FOREIGN KEY","public","payment_information","payment_id"
+"postgresql","test","public","hotel_bookings","hotel_id",4,"integer",NULL,"FOREIGN KEY","public","hotels","hotel_id"
+"postgresql","test","public","hotel_bookings","room_type",5,"integer",NULL,"FOREIGN KEY","public","room_types","room_type_id"
+"postgresql","test","public","car_rental_bookings","booking_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","test","public","car_rental_bookings","customer_id",2,"integer",NULL,"FOREIGN KEY","public","customers","customer_id"
+"postgresql","test","public","car_rental_bookings","payment_id",3,"integer",NULL,"FOREIGN KEY","public","payment_information","payment_id"
+"postgresql","test","public","car_rental_bookings","rental_company_id",4,"integer",NULL,"FOREIGN KEY","public","rental_companies","rental_company_id"
+"postgresql","test","public","car_rental_bookings","car_type",5,"integer",NULL,"FOREIGN KEY","public","car_types","car_type_id"
+"postgresql","test","public","reviews","review_id",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","test","public","reviews","customer_id",2,"integer",NULL,"FOREIGN KEY","public","customers","customer_id"
+"postgresql","test","public","reviews","hotel_booking_id",3,"integer",NULL,"FOREIGN KEY","public","hotel_bookings","booking_id"
+"postgresql","test","public","reviews","car_rental_booking_id",4,"integer",NULL,"FOREIGN KEY","public","car_rental_bookings","booking_id"
+"postgresql","test","public","reviews","flight_booking_id",5,"integer",NULL,"FOREIGN KEY","public","flight_bookings","booking_id"
+"postgresql","test","public","hotels","star_rating",4,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","car_rental_bookings","children_count",7,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","flights","price",10,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","customers","email",4,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","test","public","discounts","discount_degree",2,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","flight_bookings","children_count",6,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","flight_search_recommendations","avg_review_score",3,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","customers","first_name",2,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","test","public","flight_search_recommendations","avg_price",2,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","flights","depart_airport",3,"character",3,NULL,NULL,NULL,NULL
+"postgresql","test","public","flight_bookings","adults_count",5,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","locations","country",5,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","test","public","locations","city",3,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","test","public","locations","state",4,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","test","public","payment_information","payment",4,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","hotel_search_recommendations","avg_price",3,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","hotel_search_recommendations","avg_review_score",4,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","hotels","hotel_name",2,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","test","public","flights","departure_time",7,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","car_rental_bookings","adults_count",6,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","reviews","date",6,"date",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","flights","arrival_time",8,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","customers","last_name",3,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","test","public","car_types","car_type",2,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","test","public","customers","phone_number",5,"character",10,NULL,NULL,NULL,NULL
+"postgresql","test","public","car_rental_search_recommendations","avg_price",3,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","car_rental_search_recommendations","avg_review_score",4,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","hotel_bookings","adults_count",6,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","payment_information","card_details",3,"character varying",19,NULL,NULL,NULL,NULL
+"postgresql","test","public","flights","duration",9,"interval",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","hotel_bookings","children_count",7,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","car_types","manufacturer",3,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","test","public","flights","destin_airport",5,"character",3,NULL,NULL,NULL,NULL
+"postgresql","test","public","customers","loyalty_degree",6,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","locations","address",2,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","test","public","room_types","capacity",3,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","rental_companies","rental_company_name",2,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","test","public","airlines","airline_name",2,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","test","public","reviews","review_text",7,"text",NULL,NULL,NULL,NULL,NULL
+"postgresql","test","public","car_types","model",4,"character varying",255,NULL,NULL,NULL,NULL

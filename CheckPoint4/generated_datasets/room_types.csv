@@ -1,0 +1,6 @@
+room_type_id,room_type,capacity
+1,Single,1
+2,Double,2
+3,Triple,3
+4,Quad,4
+5,Suite,5

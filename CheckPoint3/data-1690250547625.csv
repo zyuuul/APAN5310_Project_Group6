@@ -1,0 +1,87 @@
+"dbms","table_catalog","table_schema","table_name","column_name","ordinal_position","data_type","character_maximum_length","constraint_type","table_schema-2","table_name-2","column_name-2"
+"postgresql","5310_project","public","customers","customerid",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","5310_project","public","airlines","airlineid",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","5310_project","public","flights","flightid",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","5310_project","public","flights","airlineid",2,"integer",NULL,"FOREIGN KEY","public","airlines","airlineid"
+"postgresql","5310_project","public","locations","locationid",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","5310_project","public","hotels","hotelid",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","5310_project","public","hotels","locationid",3,"integer",NULL,"UNIQUE",NULL,NULL,NULL
+"postgresql","5310_project","public","hotels","locationid",3,"integer",NULL,"FOREIGN KEY","public","locations","locationid"
+"postgresql","5310_project","public","carrentalcompanies","companyid",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","5310_project","public","carrentals","rentalid",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","5310_project","public","carrentals","companyid",2,"integer",NULL,"FOREIGN KEY","public","carrentalcompanies","companyid"
+"postgresql","5310_project","public","carrentals","locationid",4,"integer",NULL,"FOREIGN KEY","public","locations","locationid"
+"postgresql","5310_project","public","paymentinformation","paymentid",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","5310_project","public","paymentinformation","customerid",2,"integer",NULL,"FOREIGN KEY","public","customers","customerid"
+"postgresql","5310_project","public","flightpricetrends","trendid",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","5310_project","public","flightpricetrends","flightid",3,"integer",NULL,"FOREIGN KEY","public","flights","flightid"
+"postgresql","5310_project","public","hotelpricetrends","trendid",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","5310_project","public","hotelpricetrends","hotelid",3,"integer",NULL,"FOREIGN KEY","public","hotels","hotelid"
+"postgresql","5310_project","public","carrentalpricetrends","trendid",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","5310_project","public","carrentalpricetrends","rentalid",3,"integer",NULL,"FOREIGN KEY","public","carrentals","rentalid"
+"postgresql","5310_project","public","traveltimes","timeid",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","5310_project","public","traveltimes","locationid",2,"integer",NULL,"FOREIGN KEY","public","locations","locationid"
+"postgresql","5310_project","public","flightbookings","bookingid",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","5310_project","public","flightbookings","customerid",2,"integer",NULL,"FOREIGN KEY","public","customers","customerid"
+"postgresql","5310_project","public","flightbookings","paymentid",3,"integer",NULL,"FOREIGN KEY","public","paymentinformation","paymentid"
+"postgresql","5310_project","public","flightbookings","flightid",4,"integer",NULL,"FOREIGN KEY","public","flights","flightid"
+"postgresql","5310_project","public","hotelbookings","bookingid",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","5310_project","public","hotelbookings","customerid",2,"integer",NULL,"FOREIGN KEY","public","customers","customerid"
+"postgresql","5310_project","public","hotelbookings","paymentid",3,"integer",NULL,"FOREIGN KEY","public","paymentinformation","paymentid"
+"postgresql","5310_project","public","hotelbookings","hotelid",4,"integer",NULL,"FOREIGN KEY","public","hotels","hotelid"
+"postgresql","5310_project","public","carrentalbookings","bookingid",1,"integer",NULL,"PRIMARY KEY",NULL,NULL,NULL
+"postgresql","5310_project","public","carrentalbookings","customerid",2,"integer",NULL,"FOREIGN KEY","public","customers","customerid"
+"postgresql","5310_project","public","carrentalbookings","paymentid",3,"integer",NULL,"FOREIGN KEY","public","paymentinformation","paymentid"
+"postgresql","5310_project","public","carrentalbookings","rentalid",4,"integer",NULL,"FOREIGN KEY","public","carrentals","rentalid"
+"postgresql","5310_project","public","hotels","starrating",4,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","flights","source",3,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","flights","departuretime",5,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","paymentinformation","carddetails",3,"character varying",19,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","hotels","reviewcount",8,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","hotels","roomcapacity",6,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","hotels","name",2,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","flights","price",8,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","customers","email",4,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","locations","popularattractions",4,"text",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","hotelbookings","adultscount",5,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","hotels","pricepernight",5,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","locations","country",3,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","flightbookings","roomscount",7,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","locations","name",2,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","carrentalbookings","roomscount",7,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","customers","name",3,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","flightbookings","bookingmade",8,"boolean",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","customers","city",10,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","carrentalbookings","bookingmade",8,"boolean",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","flights","destination",4,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","hotelbookings","childrencount",6,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","customers","country",8,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","hotelpricetrends","price",4,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","hotels","reviewscore",7,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","hotels","zoomtype",10,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","customers","region",9,"character varying",50,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","hotelbookings","roomscount",7,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","carrentalbookings","adultscount",5,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","carrentals","priceperday",5,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","flightbookings","adultscount",5,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","carrentals","carmodel",3,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","carrentalbookings","childrencount",6,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","customers","phonenumber",5,"character varying",20,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","carrentalcompanies","name",2,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","flightbookings","childrencount",6,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","flightpricetrends","price",4,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","carrentalcompanies","contactinfo",3,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","hotelbookings","bookingmade",8,"boolean",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","carrentalpricetrends","price",4,"numeric",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","hotels","ishostel",9,"boolean",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","flights","duration",7,"interval",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","hotelpricetrends","date",2,"date",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","flights","arrivaltime",6,"timestamp without time zone",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","traveltimes","besttimetotravel",3,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","paymentinformation","billingaddress",4,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","customers","address",6,"character varying",255,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","customers","loyaltymember",7,"boolean",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","flightpricetrends","date",2,"date",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","customers","numberofvisits",2,"integer",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","carrentalpricetrends","date",2,"date",NULL,NULL,NULL,NULL,NULL
+"postgresql","5310_project","public","airlines","name",2,"character varying",255,NULL,NULL,NULL,NULL
