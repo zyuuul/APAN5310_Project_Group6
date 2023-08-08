@@ -1,0 +1,6 @@
+pandas==1.5.3
+psycopg2==2.9.6
+Faker==19.2.0
+sqlalchemy==1.4.39
+numpy==1.23.5
+decimal==1.70

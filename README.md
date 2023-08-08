@@ -38,3 +38,6 @@ This folder includes all the datasets that we found on Kaggle, and we used in th
 
 ## CheckPoint1-4
 These folders include past checkpoints, which are used to show the progress of our project.
+
+## requirements.txt
+This file includes the versions of packages that we used in the ETL file. Other packages that are not specified here will be the regular version when pip install.
